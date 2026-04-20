@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 600">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ff9ad1"/>
+      <stop offset="1" stop-color="#c0369a"/>
+    </linearGradient>
+  </defs>
+  <rect width="480" height="600" fill="url(#bg)"/>
+  <g fill="#fff" opacity="0.95">
+    <text x="240" y="280" font-family="Fredoka, sans-serif" font-size="34" font-weight="700" text-anchor="middle">drop your team photo</text>
+    <text x="240" y="320" font-family="Space Grotesk, sans-serif" font-size="18" text-anchor="middle" opacity="0.85">images/team.jpg</text>
+    <text x="240" y="360" font-family="Space Grotesk, sans-serif" font-size="14" text-anchor="middle" opacity="0.7">(then update index.html)</text>
+  </g>
+  <g fill="#fff">
+    <circle cx="240" cy="180" r="38"/>
+    <path d="M 240 142 Q 220 120 240 118 Q 260 120 240 142" />
+  </g>
+  <circle cx="230" cy="175" r="6" fill="#1a0022"/>
+  <circle cx="250" cy="175" r="6" fill="#1a0022"/>
+</svg>

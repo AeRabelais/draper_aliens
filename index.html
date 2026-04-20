@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SAFE SPACE — Pink Planet Collective</title>
+  <meta name="description" content="SAFE SPACE is a Pink Planet Collective initiative bringing joyful, stigma-free sexual health awareness to the LGBTQ+ community." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Fredoka:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="stars" aria-hidden="true"></div>
+
+  <!-- NAV -->
+  <nav class="nav">
+    <a href="#top" class="logo">
+      <svg class="logo-alien" viewBox="0 0 48 48" width="36" height="36" aria-hidden="true">
+        <use href="#alien-head" />
+      </svg>
+      <span>PINK&nbsp;PLANET</span>
+    </a>
+    <div class="nav-links">
+      <a href="#mission">Mission</a>
+      <a href="#facts">Why It Matters</a>
+      <a href="#game">Play</a>
+      <a href="#team">Team</a>
+      <a href="#donate" class="nav-cta">Donate</a>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <header id="top" class="hero">
+    <div class="hero-content">
+      <div class="badge">🛸 A Pink Planet Collective Initiative</div>
+      <h1>
+        <span class="shout">SAFE SPACE</span>
+        <span class="hero-sub">because every space should be safe.</span>
+      </h1>
+      <p class="lede">
+        We're a crew of pink aliens on a joyful mission: to beam up honest,
+        welcoming sexual-health information for the LGBTQ+ community &mdash;
+        free of stigma, full of care.
+      </p>
+      <div class="cta-row">
+        <a class="btn btn-primary" href="#donate">Fuel the mission &rarr;</a>
+        <a class="btn btn-ghost" href="#game">Play the game</a>
+      </div>
+    </div>
+    <div class="hero-visual" aria-hidden="true">
+      <svg class="hero-alien" viewBox="0 0 320 320">
+        <use href="#alien-full" />
+      </svg>
+      <div class="orbit orbit-1"></div>
+      <div class="orbit orbit-2"></div>
+      <div class="planet"></div>
+    </div>
+  </header>
+
+  <!-- MISSION -->
+  <section id="mission" class="section mission">
+    <h2>Our Signal</h2>
+    <p class="big-text">
+      Sexual health is <em>just health</em>. It belongs alongside dental checkups,
+      broken ankles, and annual physicals &mdash; not whispered about in code.
+      SAFE SPACE exists to make that truth feel ordinary, especially for queer
+      folks who've been told otherwise.
+    </p>
+    <div class="pillars">
+      <div class="pillar">
+        <div class="pillar-icon">💗</div>
+        <h3>Care, not shame</h3>
+        <p>We talk about health the way we'd talk about going to the dentist &mdash; practical, routine, no big deal.</p>
+      </div>
+      <div class="pillar">
+        <div class="pillar-icon">📡</div>
+        <h3>Honest signals</h3>
+        <p>Medically accurate, plain-language information. No jargon, no judgment, no scare tactics.</p>
+      </div>
+      <div class="pillar">
+        <div class="pillar-icon">🌈</div>
+        <h3>Built for the community</h3>
+        <p>Made by LGBTQ+ folks and allies, for LGBTQ+ folks and allies. You belong on this planet.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FACTS -->
+  <section id="facts" class="section facts">
+    <h2>Why It Matters</h2>
+    <p class="big-text">
+      LGBTQ+ people face steeper barriers to welcoming, informed healthcare &mdash;
+      not because of who they are, but because of how systems have treated them.
+      We want to change the weather.
+    </p>
+    <div class="stat-grid">
+      <div class="stat">
+        <div class="stat-num">1 in 4</div>
+        <p>LGBTQ+ adults in the U.S. report avoiding healthcare due to anticipated discrimination.*</p>
+      </div>
+      <div class="stat">
+        <div class="stat-num">99%</div>
+        <p>Effectiveness of PrEP at preventing HIV from sex when taken as prescribed.</p>
+      </div>
+      <div class="stat">
+        <div class="stat-num">U = U</div>
+        <p>People living with HIV with an undetectable viral load cannot transmit HIV sexually.</p>
+      </div>
+      <div class="stat">
+        <div class="stat-num">♾</div>
+        <p>Number of ways to love someone well. Consent, communication, and care are the constants.</p>
+      </div>
+    </div>
+    <p class="footnote">* Source: KFF, Center for American Progress. Stats shown for awareness; please consult qualified clinicians for personal health decisions.</p>
+  </section>
+
+  <!-- MINI GAME -->
+  <section id="game" class="section game">
+    <h2>🛸 BEAM THE TRUTH</h2>
+    <p class="big-text">
+      Our aliens captured some Earth chatter and need your help sorting
+      <strong>facts</strong> from <strong>myths</strong>. Score points, learn
+      things, help us beam up the truth.
+    </p>
+
+    <div class="game-container">
+      <div class="game-hud">
+        <div class="hud-item"><span class="hud-label">Score</span><span id="score">0</span></div>
+        <div class="hud-item"><span class="hud-label">Streak</span><span id="streak">0</span></div>
+        <div class="hud-item"><span class="hud-label">Signal</span><span id="progress">0 / 8</span></div>
+      </div>
+
+      <div class="game-card" id="gameCard">
+        <div class="card-inner">
+          <div class="card-label">Transmission incoming…</div>
+          <div class="card-text" id="cardText">Press START to receive the first signal.</div>
+        </div>
+      </div>
+
+      <div class="game-buttons">
+        <button class="btn game-btn btn-myth" id="btnMyth" disabled>🚫 Myth</button>
+        <button class="btn game-btn btn-start" id="btnStart">Start transmission</button>
+        <button class="btn game-btn btn-fact" id="btnFact" disabled>✅ Fact</button>
+      </div>
+
+      <div class="game-feedback" id="feedback" aria-live="polite"></div>
+    </div>
+  </section>
+
+  <!-- TEAM / ABOUT -->
+  <section id="team" class="section team">
+    <div class="team-grid">
+      <div class="team-photo-wrap">
+        <img src="images/team.jpg" alt="The Pink Planet Collective crew in pink alien shirts" class="team-photo" onerror="this.onerror=null;this.src='images/team.svg';" />
+        <div class="photo-tag">the crew, pre-mission</div>
+      </div>
+      <div class="team-copy">
+        <h2>Meet the Crew</h2>
+        <p>
+          We're a temporary-but-mighty collective that came together around
+          a shared idea: that honest, joyful conversations about sexual
+          health should be the default &mdash; especially for queer communities.
+        </p>
+        <p>
+          No slick HQ, no permanent budget &mdash; just a bunch of people in
+          pink shirts who think health deserves better marketing. Every
+          dollar donated goes back into awareness materials, outreach events,
+          and pointing folks toward the real clinics and helplines that
+          already do this work so well.
+        </p>
+        <p class="signoff">With love, from somewhere in the pink nebula. 👽💗</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- RESOURCES -->
+  <section class="section resources">
+    <h2>Real Help, Real People</h2>
+    <p class="big-text">
+      Our aliens are friendly, but they're not clinicians. If you need
+      support <em>right now</em>, these humans will take great care of you:
+    </p>
+    <div class="resource-grid">
+      <a href="https://www.thetrevorproject.org/" target="_blank" rel="noopener" class="resource">
+        <h3>The Trevor Project</h3>
+        <p>24/7 crisis support for LGBTQ+ young people. Call, text, or chat.</p>
+      </a>
+      <a href="https://www.plannedparenthood.org/" target="_blank" rel="noopener" class="resource">
+        <h3>Planned Parenthood</h3>
+        <p>Affordable sexual and reproductive healthcare, including STI testing and PrEP.</p>
+      </a>
+      <a href="https://www.cdc.gov/hiv/basics/prep.html" target="_blank" rel="noopener" class="resource">
+        <h3>CDC — PrEP Basics</h3>
+        <p>Official, plain-language info on PrEP and HIV prevention options.</p>
+      </a>
+      <a href="https://www.glma.org/" target="_blank" rel="noopener" class="resource">
+        <h3>GLMA Provider Directory</h3>
+        <p>Find LGBTQ+-friendly healthcare providers near you.</p>
+      </a>
+      <a href="https://www.lgbthotline.org/" target="_blank" rel="noopener" class="resource">
+        <h3>LGBT National Hotline</h3>
+        <p>Free, confidential peer support — no crisis required to call.</p>
+      </a>
+      <a href="https://988lifeline.org/" target="_blank" rel="noopener" class="resource">
+        <h3>988 Suicide &amp; Crisis Lifeline</h3>
+        <p>24/7 mental health support. Dial 988 in the U.S.</p>
+      </a>
+    </div>
+  </section>
+
+  <!-- DONATE -->
+  <section id="donate" class="section donate">
+    <div class="donate-card">
+      <div class="donate-copy">
+        <h2>Beam us some support</h2>
+        <p>
+          Every dollar helps us print pink-alien zines, sticker up neighborhoods,
+          and hand out stigma-free health info at community events.
+        </p>
+        <p class="donate-note">
+          Scan the QR with Venmo, or open your camera app &mdash; point, snap,
+          send. Thank you, earthling. 💗
+        </p>
+        <ul class="donate-list">
+          <li>💌 $5 &mdash; funds a pack of zines for a local LGBTQ+ center</li>
+          <li>🛸 $20 &mdash; powers one pop-up awareness booth</li>
+          <li>🪐 $100 &mdash; outfits a whole outreach shift in pink</li>
+        </ul>
+      </div>
+      <div class="donate-qr">
+        <a id="venmoLink" href="https://venmo.com/u/pantagruelspendulum" target="_blank" rel="noopener" aria-label="Open Venmo to donate">
+          <img
+            id="venmoQr"
+            src="images/draper_qr.png"
+            alt="Venmo donation QR code for the Pink Planet Collective — scan or tap to donate"
+          />
+        </a>
+        <p class="qr-label">Scan or tap &nbsp;·&nbsp; <span id="venmoHandle">@pantagruelspendulum</span></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <p>
+      PINK PLANET COLLECTIVE &nbsp;·&nbsp; <strong>SAFE SPACE</strong> Initiative
+    </p>
+    <p class="small">
+      This is a community-led awareness project, not a medical provider.
+      Information here is for education only &mdash; please consult a licensed
+      clinician for personal health decisions.
+    </p>
+    <p class="small">Made with love, glitter, and zero shame. 👽💗🌈</p>
+  </footer>
+
+  <!-- SVG SPRITES -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <defs>
+      <!-- Simple alien head for logo -->
+      <symbol id="alien-head" viewBox="0 0 48 48">
+        <ellipse cx="24" cy="22" rx="16" ry="18" fill="#ff5fb3" />
+        <ellipse cx="18" cy="22" rx="4" ry="7" fill="#1a0022" />
+        <ellipse cx="30" cy="22" rx="4" ry="7" fill="#1a0022" />
+        <ellipse cx="19" cy="19" rx="1.3" ry="2" fill="#fff" />
+        <ellipse cx="31" cy="19" rx="1.3" ry="2" fill="#fff" />
+        <path d="M18 32 Q24 36 30 32" stroke="#1a0022" stroke-width="2" fill="none" stroke-linecap="round" />
+        <circle cx="24" cy="6" r="2" fill="#ff9ad1" />
+        <line x1="24" y1="8" x2="24" y2="12" stroke="#ff9ad1" stroke-width="2" />
+      </symbol>
+
+      <!-- Full alien hero illustration -->
+      <symbol id="alien-full" viewBox="0 0 320 320">
+        <!-- Saucer base -->
+        <ellipse cx="160" cy="265" rx="120" ry="18" fill="#c0369a" opacity="0.55" />
+        <ellipse cx="160" cy="255" rx="110" ry="22" fill="#ff6ebd" />
+        <ellipse cx="160" cy="248" rx="85" ry="15" fill="#ffa8d8" />
+        <!-- Dome -->
+        <ellipse cx="160" cy="225" rx="70" ry="45" fill="#ffd4ec" opacity="0.6" />
+        <!-- Alien body -->
+        <ellipse cx="160" cy="170" rx="60" ry="70" fill="#ff5fb3" />
+        <!-- Eyes -->
+        <ellipse cx="140" cy="165" rx="12" ry="20" fill="#1a0022" />
+        <ellipse cx="180" cy="165" rx="12" ry="20" fill="#1a0022" />
+        <ellipse cx="143" cy="158" rx="3.5" ry="5" fill="#fff" />
+        <ellipse cx="183" cy="158" rx="3.5" ry="5" fill="#fff" />
+        <ellipse cx="138" cy="172" rx="1.8" ry="2.5" fill="#fff" />
+        <ellipse cx="178" cy="172" rx="1.8" ry="2.5" fill="#fff" />
+        <!-- Mouth -->
+        <path d="M140 200 Q160 212 180 200" stroke="#1a0022" stroke-width="4" fill="none" stroke-linecap="round" />
+        <!-- Blush -->
+        <ellipse cx="125" cy="195" rx="7" ry="4" fill="#ff3a9b" opacity="0.6" />
+        <ellipse cx="195" cy="195" rx="7" ry="4" fill="#ff3a9b" opacity="0.6" />
+        <!-- Antenna -->
+        <line x1="160" y1="100" x2="160" y2="75" stroke="#ff5fb3" stroke-width="4" stroke-linecap="round" />
+        <circle cx="160" cy="70" r="8" fill="#ffd4ec">
+          <animate attributeName="r" values="7;10;7" dur="2s" repeatCount="indefinite" />
+        </circle>
+        <!-- Little heart -->
+        <path d="M160 55 l-4 -4 a3 3 0 0 1 4 -4 a3 3 0 0 1 4 4 z" fill="#ff3a9b" />
+      </symbol>
+    </defs>
+  </svg>
+
+  <script src="script.js"></script>
+</body>
+</html>
