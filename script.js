@@ -1,4 +1,4 @@
-// BEAM THE TRUTH — a friendly fact/myth quiz from the Pink Planet Collective.
+// BEAM THE TRUTH: a friendly fact/myth quiz from the Pink Planet Collective.
 // All statements are written to be affirming, medically accurate, and stigma-free.
 
 const ROUNDS = [
@@ -6,25 +6,25 @@ const ROUNDS = [
     text: "HIV can be spread by sharing a cup, a hug, or a toilet seat.",
     isFact: false,
     explain:
-      "HIV is not spread through casual contact. It's transmitted through specific body fluids — never through hugs, handshakes, cups, or toilet seats."
+      "HIV is not spread through casual contact. It's transmitted through specific body fluids, and never through hugs, handshakes, cups, or toilet seats."
   },
   {
     text: "People living with HIV who have an undetectable viral load cannot transmit HIV sexually. (U=U)",
     isFact: true,
     explain:
-      "This is the science-backed reality known as U=U: Undetectable = Untransmittable. Treatment works — and it transforms lives."
+      "This is the science-backed reality known as U=U: Undetectable = Untransmittable. Treatment works, and it changes lives."
   },
   {
     text: "PrEP is a daily medication that is ~99% effective at preventing HIV from sex when taken as prescribed.",
     isFact: true,
     explain:
-      "PrEP (pre-exposure prophylaxis) is a huge part of modern HIV prevention. Talk to a clinician to see if it's right for you."
+      "PrEP (pre-exposure prophylaxis) is a big part of modern HIV prevention. Talk to a clinician to see if it's right for you."
   },
   {
     text: "Only people in certain groups need to think about sexual health.",
     isFact: false,
     explain:
-      "Sexual health is part of overall health — for every person, every identity, every relationship style. It belongs in normal checkups."
+      "Sexual health is part of overall health. It belongs in normal checkups, same as anything else."
   },
   {
     text: "Many STIs are either curable or very manageable when treated early.",
@@ -36,7 +36,7 @@ const ROUNDS = [
     text: "You should only get tested if you have symptoms.",
     isFact: false,
     explain:
-      "Most STIs can be present with no symptoms at all. Routine testing is just good self-care — like a dental cleaning."
+      "Most STIs can show up with no symptoms at all. Routine testing is just good self-care, the same as a dental cleaning."
   },
   {
     text: "The HPV vaccine protects people of every gender.",
@@ -48,7 +48,7 @@ const ROUNDS = [
     text: "Consent has to be freely given, informed, and can be revoked at any time.",
     isFact: true,
     explain:
-      "Consent is the bedrock of every healthy encounter — freely given, reversible, informed, enthusiastic, and specific. FRIES 🍟"
+      "Consent is the bedrock of every healthy encounter. A handy shorthand is FRIES: freely given, reversible, informed, enthusiastic, specific. 🍟"
   }
 ];
 
@@ -107,7 +107,7 @@ function showRound() {
   });
   setControls({ answerEnabled: true });
   els.feedback.className = "game-feedback";
-  els.feedback.innerHTML = '<span style="opacity:0.7;">Transmission received — fact or myth?</span>';
+  els.feedback.innerHTML = '<span style="opacity:0.7;">Transmission received. Fact or myth?</span>';
 }
 
 function answer(userSaidFact) {
@@ -120,12 +120,12 @@ function answer(userSaidFact) {
     state.score += 10 + Math.min(state.streak - 1, 5) * 2;
     els.feedback.className = "game-feedback correct";
     els.feedback.innerHTML =
-      `<span class="feedback-head">✨ Correct — that's a ${round.isFact ? "FACT" : "MYTH"}.</span>${round.explain}`;
+      `<span class="feedback-head">✨ Correct. That's a ${round.isFact ? "FACT" : "MYTH"}.</span>${round.explain}`;
   } else {
     state.streak = 0;
     els.feedback.className = "game-feedback wrong";
     els.feedback.innerHTML =
-      `<span class="feedback-head">👽 Not quite — that was a ${round.isFact ? "FACT" : "MYTH"}.</span>${round.explain}`;
+      `<span class="feedback-head">👽 Not quite. That one was a ${round.isFact ? "FACT" : "MYTH"}.</span>${round.explain}`;
   }
 
   state.index += 1;
@@ -147,7 +147,7 @@ function endGame() {
   const msg = state.score >= total * 0.75
     ? "🛸 Mission accomplished, earthling! You're one of us now."
     : state.score >= total * 0.4
-      ? "💗 Great flight. A couple of signals to revisit — that's what we're here for."
+      ? "💗 Great flight. A couple of signals to revisit. That's what we're here for."
       : "🌱 Every journey starts somewhere. Check the resources below for more great info!";
 
   els.cardText.innerHTML = `<div style="font-size:1.1em;">${msg}</div><div style="margin-top:0.6em;opacity:0.8;font-size:0.85em;">Final score: ${state.score}</div>`;
